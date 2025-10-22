@@ -26,6 +26,9 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground overflow-hidden">
       {/* Animated background grid */}
       <div className="fixed inset-0 cyber-grid opacity-20 pointer-events-none" />
+      
+      {/* Enhanced glitch background effects */}
+      <div className="fixed inset-0 glitch-bg pointer-events-none" />
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--neon-cyan)]/20 bg-background/80 backdrop-blur-sm">
@@ -48,38 +51,60 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        {/* Animated background elements */}
+        {/* Animated background elements with enhanced glitch */}
         <div className="absolute inset-0 overflow-hidden">
+          {/* Primary cyan glow */}
           <div 
-            className="absolute w-96 h-96 rounded-full bg-[var(--neon-cyan)]/10 blur-3xl"
+            className="absolute w-96 h-96 rounded-full blur-3xl"
             style={{ 
               left: '10%', 
               top: '20%',
-              transform: `translateY(${scrollY * 0.5}px)`
+              background: 'radial-gradient(circle, rgba(0, 255, 255, 0.15) 0%, transparent 70%)',
+              transform: `translateY(${scrollY * 0.5}px)`,
+              filter: 'drop-shadow(0 0 30px rgba(0, 255, 255, 0.3))'
             }}
           />
+          {/* Secondary magenta glow */}
           <div 
-            className="absolute w-96 h-96 rounded-full bg-[var(--neon-magenta)]/10 blur-3xl"
+            className="absolute w-96 h-96 rounded-full blur-3xl"
             style={{ 
               right: '10%', 
               bottom: '10%',
-              transform: `translateY(${-scrollY * 0.3}px)`
+              background: 'radial-gradient(circle, rgba(255, 0, 255, 0.15) 0%, transparent 70%)',
+              transform: `translateY(${-scrollY * 0.3}px)`,
+              filter: 'drop-shadow(0 0 30px rgba(255, 0, 255, 0.3))'
             }}
           />
+          {/* Tertiary gold accent */}
+          <div 
+            className="absolute w-80 h-80 rounded-full blur-3xl"
+            style={{ 
+              left: '60%', 
+              top: '40%',
+              background: 'radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%)',
+              transform: `translateY(${scrollY * 0.2}px)`,
+              filter: 'drop-shadow(0 0 20px rgba(255, 215, 0, 0.2))'
+            }}
+          />
+          {/* Glitch lines effect */}
+          <div className="absolute inset-0 opacity-5" style={{
+            backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 255, 0.1) 2px, rgba(0, 255, 255, 0.1) 4px)',
+            animation: 'glitch-scan 8s linear infinite'
+          }} />
         </div>
 
         <div className="container relative z-10 max-w-4xl mx-auto text-center">
-          <div className="mb-8 flex justify-center">
-            <img src="/logo-cyberpunk.png" alt="Custom Technology Solutions" className="h-32 w-32" />
+          <div className="mb-8 flex justify-center animate-pulse">
+            <img src="/logo-cyberpunk.png" alt="Custom Technology Solutions" className="h-32 w-32 drop-shadow-[0_0_30px_rgba(0,255,255,0.5)]" />
           </div>
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="neon-glow">ADVANCED</span>
             <br />
             <span className="neon-glow-magenta">DATA INTELLIGENCE</span>
             <br />
-            <span className="text-white">FOR BUSINESS PARTNERS</span>
+            <span className="neon-glow-gold">FOR BUSINESS PARTNERS</span>
           </h1>
-          <p className="text-2xl text-gray-300 mb-8">Custom Technology Solutions</p>
+          <p className="text-2xl neon-glow-gold mb-8 font-semibold">Custom Technology Solutions</p>
 
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Transform your financial and operational data into actionable insights. 
@@ -88,14 +113,13 @@ export default function Home() {
 
           <div className="flex gap-4 justify-center flex-wrap">
             <Button 
-              className="bg-[var(--neon-cyan)] text-black hover:bg-[var(--neon-cyan)]/80 font-bold px-8 py-6 text-lg"
+              className="bg-[var(--neon-cyan)] text-black hover:bg-[var(--neon-cyan)]/80 font-bold px-8 py-6 text-lg shadow-[0_0_20px_rgba(0,255,255,0.5)] hover:shadow-[0_0_30px_rgba(0,255,255,0.8)] transition-all"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Start Partnership <ArrowRight className="ml-2" />
             </Button>
             <Button 
-              variant="outline"
-              className="border-[var(--neon-magenta)] text-[var(--neon-magenta)] hover:bg-[var(--neon-magenta)]/10 px-8 py-6 text-lg"
+              className="border-[var(--neon-gold)] text-[var(--neon-gold)] bg-transparent hover:bg-[var(--neon-gold)]/10 px-8 py-6 text-lg border-2 shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_30px_rgba(255,215,0,0.6)] transition-all"
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Services
@@ -110,7 +134,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="relative py-20 border-t border-[var(--neon-cyan)]/20">
+      <section id="services" className="relative py-20 border-t border-[var(--neon-cyan)]/20 bg-gradient-to-b from-background via-background to-background">
         <div className="container">
           <h2 className="text-5xl font-bold mb-4 neon-glow text-center">OUR EXPERTISE</h2>
           <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto">
@@ -119,11 +143,11 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Data Structuring */}
-            <Card className="bg-card border-[var(--neon-cyan)]/30 hover:border-[var(--neon-cyan)]/60 transition p-8 group cursor-pointer">
+            <Card className="bg-card border-[var(--neon-cyan)]/40 hover:border-[var(--neon-cyan)]/80 hover:shadow-[0_0_30px_rgba(0,255,255,0.2)] transition p-8 group cursor-pointer">
               <div className="flex items-start gap-4 mb-4">
-                <Zap className="w-8 h-8 text-[var(--neon-lime)] flex-shrink-0 mt-1" />
+                <Zap className="w-8 h-8 text-[var(--neon-gold)] flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-2xl font-bold mb-2 neon-glow-lime">Data Structuring</h3>
+                  <h3 className="text-2xl font-bold mb-2 neon-glow-gold">Data Structuring</h3>
                   <p className="text-gray-300">
                     Transform raw, unstructured data into organized, queryable datasets. 
                     We establish data governance frameworks that ensure consistency, accuracy, and compliance.
@@ -133,7 +157,7 @@ export default function Home() {
             </Card>
 
             {/* Data Warehousing */}
-            <Card className="bg-card border-[var(--neon-magenta)]/30 hover:border-[var(--neon-magenta)]/60 transition p-8 group cursor-pointer">
+            <Card className="bg-card border-[var(--neon-magenta)]/40 hover:border-[var(--neon-magenta)]/80 hover:shadow-[0_0_30px_rgba(255,0,255,0.2)] transition p-8 group cursor-pointer">
               <div className="flex items-start gap-4 mb-4">
                 <Database className="w-8 h-8 text-[var(--neon-magenta)] flex-shrink-0 mt-1" />
                 <div>
@@ -147,7 +171,7 @@ export default function Home() {
             </Card>
 
             {/* BI & Reporting */}
-            <Card className="bg-card border-[var(--neon-cyan)]/30 hover:border-[var(--neon-cyan)]/60 transition p-8 group cursor-pointer">
+            <Card className="bg-card border-[var(--neon-cyan)]/40 hover:border-[var(--neon-cyan)]/80 hover:shadow-[0_0_30px_rgba(0,255,255,0.2)] transition p-8 group cursor-pointer">
               <div className="flex items-start gap-4 mb-4">
                 <BarChart3 className="w-8 h-8 text-[var(--neon-cyan)] flex-shrink-0 mt-1" />
                 <div>
@@ -161,11 +185,11 @@ export default function Home() {
             </Card>
 
             {/* Asset Management */}
-            <Card className="bg-card border-[var(--neon-lime)]/30 hover:border-[var(--neon-lime)]/60 transition p-8 group cursor-pointer">
+            <Card className="bg-card border-[var(--neon-gold)]/40 hover:border-[var(--neon-gold)]/80 hover:shadow-[0_0_30px_rgba(255,215,0,0.2)] transition p-8 group cursor-pointer">
               <div className="flex items-start gap-4 mb-4">
-                <Package className="w-8 h-8 text-[var(--neon-lime)] flex-shrink-0 mt-1" />
+                <Package className="w-8 h-8 text-[var(--neon-gold)] flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-2xl font-bold mb-2 neon-glow-lime">Asset Management</h3>
+                  <h3 className="text-2xl font-bold mb-2 neon-glow-gold">Asset Management</h3>
                   <p className="text-gray-300">
                     Comprehensive asset tracking from chairs to aircraft components. 
                     Whitelisted dashboarding platforms provide complete visibility and control.
