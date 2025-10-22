@@ -29,6 +29,61 @@ export default function Home() {
       
       {/* Enhanced glitch background effects */}
       <div className="fixed inset-0 glitch-bg pointer-events-none" />
+      
+      {/* Data Visualization Background */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        {/* Faded line chart */}
+        <svg className="absolute w-full h-full" style={{ top: '10%', left: '-10%', opacity: 0.08 }}>
+          <polyline points="0,200 100,150 200,180 300,100 400,140 500,80 600,120" 
+            fill="none" stroke="var(--neon-cyan)" strokeWidth="2" />
+          <circle cx="0" cy="200" r="4" fill="var(--neon-gold)" />
+          <circle cx="100" cy="150" r="4" fill="var(--neon-gold)" />
+          <circle cx="200" cy="180" r="4" fill="var(--neon-gold)" />
+          <circle cx="300" cy="100" r="4" fill="var(--neon-gold)" />
+          <circle cx="400" cy="140" r="4" fill="var(--neon-gold)" />
+          <circle cx="500" cy="80" r="4" fill="var(--neon-gold)" />
+          <circle cx="600" cy="120" r="4" fill="var(--neon-gold)" />
+        </svg>
+        
+        {/* Faded bar chart */}
+        <svg className="absolute w-full h-full" style={{ bottom: '15%', right: '-5%', opacity: 0.08 }}>
+          <rect x="0" y="100" width="30" height="100" fill="var(--neon-magenta)" />
+          <rect x="40" y="60" width="30" height="140" fill="var(--neon-magenta)" />
+          <rect x="80" y="80" width="30" height="120" fill="var(--neon-magenta)" />
+          <rect x="120" y="40" width="30" height="160" fill="var(--neon-magenta)" />
+          <rect x="160" y="70" width="30" height="130" fill="var(--neon-magenta)" />
+          <rect x="200" y="50" width="30" height="150" fill="var(--neon-magenta)" />
+        </svg>
+        
+        {/* Faded scatter plot */}
+        <svg className="absolute w-full h-full" style={{ top: '40%', left: '5%', opacity: 0.06 }}>
+          <circle cx="20" cy="30" r="3" fill="var(--neon-cyan)" />
+          <circle cx="50" cy="60" r="3" fill="var(--neon-cyan)" />
+          <circle cx="80" cy="25" r="3" fill="var(--neon-cyan)" />
+          <circle cx="110" cy="70" r="3" fill="var(--neon-cyan)" />
+          <circle cx="140" cy="40" r="3" fill="var(--neon-cyan)" />
+          <circle cx="170" cy="65" r="3" fill="var(--neon-cyan)" />
+          <circle cx="200" cy="35" r="3" fill="var(--neon-cyan)" />
+          <circle cx="230" cy="55" r="3" fill="var(--neon-cyan)" />
+          <circle cx="260" cy="45" r="3" fill="var(--neon-cyan)" />
+          <circle cx="290" cy="70" r="3" fill="var(--neon-cyan)" />
+        </svg>
+        
+        {/* Grid lines data visualization */}
+        <svg className="absolute w-full h-full" style={{ top: '50%', right: '10%', opacity: 0.07 }}>
+          <line x1="0" y1="0" x2="200" y2="200" stroke="var(--neon-gold)" strokeWidth="1" />
+          <line x1="0" y1="50" x2="200" y2="250" stroke="var(--neon-gold)" strokeWidth="1" />
+          <line x1="0" y1="100" x2="200" y2="300" stroke="var(--neon-gold)" strokeWidth="1" />
+          <line x1="50" y1="0" x2="250" y2="200" stroke="var(--neon-magenta)" strokeWidth="1" />
+          <line x1="100" y1="0" x2="300" y2="200" stroke="var(--neon-magenta)" strokeWidth="1" />
+        </svg>
+        
+        {/* Floating data points */}
+        <div className="absolute top-1/4 left-1/3 w-2 h-2 rounded-full bg-[var(--neon-cyan)] data-point" />
+        <div className="absolute top-1/3 right-1/4 w-2 h-2 rounded-full bg-[var(--neon-magenta)] data-point" style={{ animationDelay: '0.5s' }} />
+        <div className="absolute bottom-1/3 left-1/4 w-2 h-2 rounded-full bg-[var(--neon-gold)] data-point" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-2/3 right-1/3 w-2 h-2 rounded-full bg-[var(--neon-cyan)] data-point" style={{ animationDelay: '1.5s' }} />
+      </div>
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--neon-cyan)]/20 bg-background/80 backdrop-blur-sm">
@@ -202,21 +257,17 @@ export default function Home() {
       </section>
 
       {/* Expertise Section */}
-      <section id="expertise" className="relative py-20 border-t border-[var(--neon-magenta)]/20">
+      <section id="expertise" className="relative py-20 border-t border-[var(--neon-magenta)]/20 z-10">
         <div className="container">
           <h2 className="text-5xl font-bold mb-4 neon-glow-magenta text-center">PROVEN EXPERTISE</h2>
           
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
+          <div className="grid md:grid-cols-2 gap-8 mt-16">
             <div className="text-center">
               <div className="text-5xl font-bold neon-glow mb-2">30+</div>
               <p className="text-gray-300">Years in Asset Management</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold neon-glow-magenta mb-2">100+</div>
-              <p className="text-gray-300">Enterprise Clients Served</p>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold neon-glow-lime mb-2">∞</div>
+              <div className="text-5xl font-bold neon-glow-gold mb-2">∞</div>
               <p className="text-gray-300">Financial & Auditing Background</p>
             </div>
           </div>
