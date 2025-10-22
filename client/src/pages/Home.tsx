@@ -30,7 +30,13 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--neon-cyan)]/20 bg-background/80 backdrop-blur-sm">
         <div className="container flex items-center justify-between h-16">
-          <div className="text-2xl font-bold neon-glow">CT SOLUTIONS</div>
+          <div className="flex items-center gap-3">
+            <img src="/logo-cyberpunk.png" alt="CT Solutions" className="h-10 w-10" />
+            <div>
+              <div className="text-lg font-bold neon-glow">CT SOLUTIONS</div>
+              <div className="text-xs text-gray-400">Custom Technology</div>
+            </div>
+          </div>
           <div className="flex gap-8 items-center">
             <a href="#services" className="text-sm hover:neon-glow transition">Services</a>
             <a href="#expertise" className="text-sm hover:neon-glow transition">Expertise</a>
@@ -63,6 +69,9 @@ export default function Home() {
         </div>
 
         <div className="container relative z-10 max-w-4xl mx-auto text-center">
+          <div className="mb-8 flex justify-center">
+            <img src="/logo-cyberpunk.png" alt="Custom Technology Solutions" className="h-32 w-32" />
+          </div>
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="neon-glow">ADVANCED</span>
             <br />
@@ -70,6 +79,7 @@ export default function Home() {
             <br />
             <span className="text-white">FOR BUSINESS PARTNERS</span>
           </h1>
+          <p className="text-2xl text-gray-300 mb-8">Custom Technology Solutions</p>
 
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Transform your financial and operational data into actionable insights. 
@@ -229,10 +239,10 @@ export default function Home() {
                   <p className="text-lg font-semibold">John Olivier</p>
                 </div>
                 <a 
-                  href="tel:+27615229536"
+                  href="tel:+966566256103"
                   className="flex items-center gap-2 text-[var(--neon-cyan)] hover:text-[var(--neon-cyan)]/80 transition"
                 >
-                  <span>+27 61 522 9536</span>
+                  <span>+966 56 625 6103</span>
                 </a>
                 <a 
                   href="mailto:john@ctsolutionstech.co.za"
@@ -242,7 +252,7 @@ export default function Home() {
                   <span>john@ctsolutionstech.co.za</span>
                 </a>
                 <a 
-                  href="https://wa.me/27615229536"
+                  href="https://wa.me/966566256103"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-[var(--neon-lime)] hover:text-[var(--neon-lime)]/80 transition"
@@ -262,20 +272,20 @@ export default function Home() {
                   <p className="text-lg font-semibold">Albert Olivier</p>
                 </div>
                 <a 
-                  href="tel:+966568888327"
+                  href="tel:+966566256103"
                   className="flex items-center gap-2 text-[var(--neon-magenta)] hover:text-[var(--neon-magenta)]/80 transition"
                 >
-                  <span>+966 56 888 8327</span>
+                  <span>+966 56 625 6103</span>
                 </a>
                 <a 
-                  href="mailto:albert@ctsolutionstech.co.za"
+                  href="mailto:john@ctsolutionstech.co.za"
                   className="flex items-center gap-2 text-[var(--neon-magenta)] hover:text-[var(--neon-magenta)]/80 transition"
                 >
                   <Mail className="w-4 h-4" />
-                  <span>albert@ctsolutionstech.co.za</span>
+                  <span>john@ctsolutionstech.co.za</span>
                 </a>
                 <a 
-                  href="https://wa.me/966568888327"
+                  href="https://wa.me/966566256103"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-[var(--neon-lime)] hover:text-[var(--neon-lime)]/80 transition"
@@ -366,7 +376,13 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h4 className="font-bold neon-glow mb-4">CT SOLUTIONS</h4>
+              <div className="flex items-center gap-2 mb-4">
+                <img src="/logo-cyberpunk.png" alt="CT Solutions" className="h-8 w-8" />
+                <div>
+                  <h4 className="font-bold neon-glow">CT SOLUTIONS</h4>
+                  <p className="text-xs text-gray-500">Custom Technology Solutions</p>
+                </div>
+              </div>
               <p className="text-gray-400 text-sm">
                 Advanced data intelligence and asset management solutions for strategic business partners.
               </p>
