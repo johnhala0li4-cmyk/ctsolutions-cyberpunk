@@ -97,6 +97,7 @@ export default function Home() {
           </div>
           <div className="flex gap-8 items-center">
             <a href="#services" className="text-sm hover:neon-glow transition">Services</a>
+            <a href="#analytics" className="text-sm hover:neon-glow transition">Analytics</a>
             <a href="#expertise" className="text-sm hover:neon-glow transition">Expertise</a>
             <a href="#contact" className="text-sm hover:neon-glow transition">Contact</a>
             <a href="#portal" className="text-sm hover:neon-glow transition">Portal</a>
@@ -422,6 +423,139 @@ export default function Home() {
               </Button>
             </form>
           </Card>
+        </div>
+      </section>
+
+      {/* Tableau Embedded Analytics Section */}
+      <section id="analytics" className="relative py-20 border-t border-[var(--neon-gold)]/20">
+        <div className="container">
+          <h2 className="text-5xl font-bold mb-4 neon-glow-gold text-center">EMBEDDED ANALYTICS PLATFORM</h2>
+          <p className="text-center text-gray-300 mb-16 max-w-3xl mx-auto">
+            Leverage Tableau Cloud's embedded analytics to provide your business partners with real-time, interactive dashboards directly within your portal.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Analytics Benefits */}
+            <Card className="bg-card border border-[var(--neon-gold)]/30 p-8">
+              <h3 className="text-2xl font-bold mb-6 neon-glow-gold">Why Embedded Analytics?</h3>
+              <ul className="space-y-4 text-gray-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-[var(--neon-gold)] font-bold text-lg">✦</span>
+                  <span><strong>Real-Time Visibility:</strong> Track portfolio performance, asset allocation, and KPIs instantly</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[var(--neon-gold)] font-bold text-lg">✦</span>
+                  <span><strong>Interactive Dashboards:</strong> Drill-down capabilities and custom filters for deeper insights</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[var(--neon-gold)] font-bold text-lg">✦</span>
+                  <span><strong>Compliance Ready:</strong> Audit trails and regulatory reporting built-in</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[var(--neon-gold)] font-bold text-lg">✦</span>
+                  <span><strong>Seamless Integration:</strong> Embedded directly in your portal with enterprise SSO</span>
+                </li>
+              </ul>
+            </Card>
+
+            {/* Use Cases */}
+            <Card className="bg-card border border-[var(--neon-cyan)]/30 p-8">
+              <h3 className="text-2xl font-bold mb-6 neon-glow">Key Use Cases</h3>
+              <ul className="space-y-4 text-gray-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-[var(--neon-cyan)] font-bold text-lg">→</span>
+                  <span><strong>Portfolio Analytics:</strong> Asset allocation, performance attribution, and risk metrics</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[var(--neon-cyan)] font-bold text-lg">→</span>
+                  <span><strong>Performance Reporting:</strong> Historical returns, benchmarking, and fee analysis</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[var(--neon-cyan)] font-bold text-lg">→</span>
+                  <span><strong>Compliance Dashboards:</strong> Regulatory metrics and audit-ready visualizations</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[var(--neon-cyan)] font-bold text-lg">→</span>
+                  <span><strong>Client Communication:</strong> Quarterly reports and personalized portfolio views</span>
+                </li>
+              </ul>
+            </Card>
+          </div>
+
+          {/* Technical Integration */}
+          <Card className="bg-card border border-[var(--neon-magenta)]/30 p-8 mb-12">
+            <h3 className="text-2xl font-bold mb-4 neon-glow-magenta">Seamless Integration with Your Data Infrastructure</h3>
+            <p className="text-gray-300 mb-6">
+              Our Tableau Cloud embedded analytics connects directly to your data warehouse, consolidating data from multiple sources into unified, interactive dashboards. Your business partners gain immediate access to real-time insights without managing complex infrastructure.
+            </p>
+            <div className="grid md:grid-cols-3 gap-4 text-sm">
+              <div className="bg-background/50 p-4 rounded border border-[var(--neon-magenta)]/20">
+                <p className="text-[var(--neon-magenta)] font-bold mb-2">Data Warehouse</p>
+                <p className="text-gray-400">Consolidated data from all sources</p>
+              </div>
+              <div className="bg-background/50 p-4 rounded border border-[var(--neon-magenta)]/20">
+                <p className="text-[var(--neon-magenta)] font-bold mb-2">Tableau Cloud</p>
+                <p className="text-gray-400">Real-time analytics and visualizations</p>
+              </div>
+              <div className="bg-background/50 p-4 rounded border border-[var(--neon-magenta)]/20">
+                <p className="text-[var(--neon-magenta)] font-bold mb-2">Your Portal</p>
+                <p className="text-gray-400">Embedded dashboards for partners</p>
+              </div>
+            </div>
+          </Card>
+
+          {/* Competitive Advantage */}
+          <Card className="bg-gradient-to-r from-[var(--neon-cyan)]/10 to-[var(--neon-gold)]/10 border border-[var(--neon-cyan)]/30 p-8">
+            <h3 className="text-2xl font-bold mb-4 neon-glow">Your Competitive Edge</h3>
+            <p className="text-gray-300 mb-6">
+              In today's data-driven landscape, embedded analytics differentiate your organization from competitors. Provide your business partners with transparency, reduce manual reporting overhead, and build trust through real-time, audit-ready data access. Transform your portal into a strategic advantage.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <div className="px-4 py-2 bg-[var(--neon-cyan)]/20 border border-[var(--neon-cyan)]/40 rounded text-sm text-[var(--neon-cyan)]">Real-Time Data</div>
+              <div className="px-4 py-2 bg-[var(--neon-gold)]/20 border border-[var(--neon-gold)]/40 rounded text-sm text-[var(--neon-gold)]">Enterprise Security</div>
+              <div className="px-4 py-2 bg-[var(--neon-magenta)]/20 border border-[var(--neon-magenta)]/40 rounded text-sm text-[var(--neon-magenta)]">Compliance Ready</div>
+              <div className="px-4 py-2 bg-[var(--neon-lime)]/20 border border-[var(--neon-lime)]/40 rounded text-sm text-[var(--neon-lime)]">Scalable</div>
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      {/* Industry Insights Section */}
+      <section id="insights" className="relative py-20 border-t border-[var(--neon-cyan)]/20">
+        <div className="container">
+          <h2 className="text-5xl font-bold mb-4 neon-glow text-center">INDUSTRY INSIGHTS</h2>
+          <p className="text-center text-gray-300 mb-16 max-w-3xl mx-auto">
+            Combining 30+ years of asset management expertise with cutting-edge data intelligence technology.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Financial Expertise */}
+            <Card className="bg-card border border-[var(--neon-cyan)]/30 p-8">
+              <div className="text-4xl font-bold neon-glow mb-4">30+</div>
+              <h3 className="text-xl font-bold mb-3">Years of Financial Expertise</h3>
+              <p className="text-gray-300 text-sm">
+                Deep understanding of asset management, portfolio optimization, and financial reporting requirements that drive strategic decisions.
+              </p>
+            </Card>
+
+            {/* Data Intelligence */}
+            <Card className="bg-card border border-[var(--neon-gold)]/30 p-8">
+              <div className="text-4xl font-bold neon-glow-gold mb-4">∞</div>
+              <h3 className="text-xl font-bold mb-3">Modern Data Intelligence</h3>
+              <p className="text-gray-300 text-sm">
+                Advanced data warehousing, business intelligence, and embedded analytics that transform raw data into actionable insights.
+              </p>
+            </Card>
+
+            {/* Partnership Focus */}
+            <Card className="bg-card border border-[var(--neon-magenta)]/30 p-8">
+              <div className="text-4xl font-bold neon-glow-magenta mb-4">✦</div>
+              <h3 className="text-xl font-bold mb-3">Strategic Partnership Approach</h3>
+              <p className="text-gray-300 text-sm">
+                We're invested in your success. Custom solutions tailored to your business requirements, not off-the-shelf implementations.
+              </p>
+            </Card>
+          </div>
         </div>
       </section>
 
